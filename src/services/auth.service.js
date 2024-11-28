@@ -89,7 +89,6 @@ export const profileService=async([type,token])=>{
     if(!type=='Bearer' || !token){
       return "Unauthorization"
     }
-
     const email=await decode_jwt(token)
     const result=await findByemail(email)
     return result
