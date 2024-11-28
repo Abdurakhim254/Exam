@@ -4,7 +4,7 @@ export const createCustomerTable = async () => {
   try {
     if (!(await connection.schema.hasTable("customer"))) {
       await connection.schema.createTable("customer", (table) => {
-        table.uuid("id").primary,
+        table.uuid("id").primary(),
           table.string("first_name").notNullable(),
           table.string("last_name").notNullable(),
           table.string("email").unique().notNullable(),
@@ -24,5 +24,6 @@ export const createCustomerTable = async () => {
     console.error(error.message);
   }
 };
+
 
 
