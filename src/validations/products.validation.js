@@ -1,6 +1,6 @@
 import Joi from "joi";
 
-export const feedbackValidationSchema=Joi.object({
+export const ProductValidationSchema=Joi.object({
     id:Joi.string(),
     name:Joi.string().min(3).required(),
     description:Joi.string().min(8).required(),
