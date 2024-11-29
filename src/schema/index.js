@@ -12,17 +12,18 @@ import {createProductTable} from "./products/products.schema.js"
 export const createAlltables=async()=>{
     try {
         await createCustomerTable()
+        await createProductTable()
         await createFeedbackTable()
         await createAddressTable()
         await createCustomNotestTable()
         await createCustomerInteractionsTable()
-        await createProductTable()
         await createDiscounttTable()
-        await createOrder_itemsTable()
         await createOrdersTable()
+        await createOrder_itemsTable()
         await createPaymenttTable()
         console.log(true)
     } catch (error) {
         console.error(error.message)
     }
 }
+await createAlltables()

@@ -1,22 +1,25 @@
 import { connection } from "../../Database/index.js";
+import {logger} from "../../utils/logger/logger.js"
+
 
 export const createDiscounttTable = async () => {
     try {
       if (!(await connection.schema.hasTable("discount"))) {
         await connection.schema.createTable("discount", (table) => {
           table.uuid("id").primary(),
-          table.uuid('product_id').references('id').inTable('products').notNullable(),
+          table.uuid('product_id').references('id').inTable('products').onDelete("CASCADE").onUpdate("CASCADE").notNullable(),
           table.string('code').notNullable(),
           table.enu('discount_type',['percentage', 'fixed_amount']),
           table.date('expiration_date').defaultTo(connection.fn.now())
         });
-        console.log("Table yaratildi");
+        logger.info("Table yaratildi");
       } else {
-        console.log("Table allaqachon yaratilgan");
+        logger.info("Table allaqachon yaratilgan");
       }
     } catch (error) {
-      console.error(error.message);
+      logger.error(error.message);
     }
   };
   
 
+await createDiscounttTable()

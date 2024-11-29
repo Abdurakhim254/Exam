@@ -1,0 +1,60 @@
+[32m{"level":"info","message":"Table allaqachon yaratilgan","timestamp":"2024-11-29T12:05:17.968Z"}[39m
+[32m{"level":"info","message":"Table allaqachon yaratilgan","timestamp":"2024-11-29T12:05:17.976Z"}[39m
+[32m{"level":"info","message":"Table allaqachon yaratilgan","timestamp":"2024-11-29T12:05:17.977Z"}[39m
+[32m{"level":"info","message":"Table yaratildi","timestamp":"2024-11-29T15:44:00.078Z"}[39m
+[32m{"level":"info","message":"Table yaratildi","timestamp":"2024-11-29T15:44:00.103Z"}[39m
+[32m{"level":"info","message":"Table yaratildi","timestamp":"2024-11-29T15:44:00.114Z"}[39m
+[32m{"level":"info","message":"Table yaratildi","timestamp":"2024-11-29T15:44:00.128Z"}[39m
+[32m{"level":"info","message":"Table yaratildi","timestamp":"2024-11-29T15:44:00.143Z"}[39m
+[31m{"level":"error","message":"table.uuid(...).references(...).onDelete is not a function","timestamp":"2024-11-29T15:44:00.147Z"}[39m
+[31m{"level":"error","message":"alter table \"discount\" add constraint \"discount_product_id_foreign\" foreign key (\"product_id\") references \"products\" (\"id\") on update CASCADE on delete CASCADE - отношение \"products\" не существует","timestamp":"2024-11-29T15:44:00.163Z"}[39m
+[31m{"level":"error","message":"alter table \"order_items\" add constraint \"order_items_order_id_foreign\" foreign key (\"order_id\") references \"orders\" (\"id\") on update CASCADE on delete CASCADE - отношение \"orders\" не существует","timestamp":"2024-11-29T15:44:00.173Z"}[39m
+[32m{"level":"info","message":"Table yaratildi","timestamp":"2024-11-29T15:44:00.187Z"}[39m
+[32m{"level":"info","message":"Table yaratildi","timestamp":"2024-11-29T15:44:00.203Z"}[39m
+[31m{"level":"error","message":"table.uuid(...).references(...).onDelete is not a function","timestamp":"2024-11-29T15:45:11.158Z"}[39m
+[32m{"level":"info","message":"Table yaratildi","timestamp":"2024-11-29T15:46:05.117Z"}[39m
+[32m{"level":"info","message":"Table allaqachon yaratilgan","timestamp":"2024-11-29T15:46:29.642Z"}[39m
+[32m{"level":"info","message":"Table allaqachon yaratilgan","timestamp":"2024-11-29T15:46:57.529Z"}[39m
+[32m{"level":"info","message":"Table allaqachon yaratilgan","timestamp":"2024-11-29T15:46:57.539Z"}[39m
+[32m{"level":"info","message":"Table allaqachon yaratilgan","timestamp":"2024-11-29T15:46:57.544Z"}[39m
+[32m{"level":"info","message":"Table allaqachon yaratilgan","timestamp":"2024-11-29T15:46:57.548Z"}[39m
+[32m{"level":"info","message":"Table allaqachon yaratilgan","timestamp":"2024-11-29T15:46:57.552Z"}[39m
+[32m{"level":"info","message":"Table allaqachon yaratilgan","timestamp":"2024-11-29T15:46:57.555Z"}[39m
+[32m{"level":"info","message":"Table allaqachon yaratilgan","timestamp":"2024-11-29T15:46:57.558Z"}[39m
+[32m{"level":"info","message":"Table allaqachon yaratilgan","timestamp":"2024-11-29T15:46:57.561Z"}[39m
+[32m{"level":"info","message":"Table allaqachon yaratilgan","timestamp":"2024-11-29T15:46:57.566Z"}[39m
+[32m{"level":"info","message":"Table allaqachon yaratilgan","timestamp":"2024-11-29T15:46:57.569Z"}[39m
+[32m{"level":"info","message":"Table allaqachon yaratilgan","timestamp":"2024-11-29T15:46:57.572Z"}[39m
+[31m{"level":"error","message":"alter table \"discount\" add constraint \"discount_product_id_foreign\" foreign key (\"product_id\") references \"products\" (\"id\") on update CASCADE on delete CASCADE - отношение \"products\" не существует","timestamp":"2024-11-29T15:50:47.813Z"}[39m
+[32m{"level":"info","message":"Table yaratildi","timestamp":"2024-11-29T15:50:47.834Z"}[39m
+[32m{"level":"info","message":"Table yaratildi","timestamp":"2024-11-29T15:50:47.851Z"}[39m
+[32m{"level":"info","message":"Table yaratildi","timestamp":"2024-11-29T15:50:47.863Z"}[39m
+[32m{"level":"info","message":"Table yaratildi","timestamp":"2024-11-29T15:50:47.877Z"}[39m
+[32m{"level":"info","message":"Table yaratildi","timestamp":"2024-11-29T15:50:47.892Z"}[39m
+[32m{"level":"info","message":"Table yaratildi","timestamp":"2024-11-29T15:50:47.907Z"}[39m
+[32m{"level":"info","message":"Table allaqachon yaratilgan","timestamp":"2024-11-29T15:50:47.911Z"}[39m
+[31m{"level":"error","message":"alter table \"order_items\" add constraint \"order_items_order_id_foreign\" foreign key (\"order_id\") references \"orders\" (\"id\") on update CASCADE on delete CASCADE - отношение \"orders\" не существует","timestamp":"2024-11-29T15:50:47.919Z"}[39m
+[32m{"level":"info","message":"Table yaratildi","timestamp":"2024-11-29T15:50:47.934Z"}[39m
+[32m{"level":"info","message":"Table yaratildi","timestamp":"2024-11-29T15:50:47.951Z"}[39m
+[32m{"level":"info","message":"Table allaqachon yaratilgan","timestamp":"2024-11-29T15:52:46.758Z"}[39m
+[32m{"level":"info","message":"Table allaqachon yaratilgan","timestamp":"2024-11-29T15:52:46.767Z"}[39m
+[32m{"level":"info","message":"Table allaqachon yaratilgan","timestamp":"2024-11-29T15:52:46.771Z"}[39m
+[32m{"level":"info","message":"Table allaqachon yaratilgan","timestamp":"2024-11-29T15:52:46.774Z"}[39m
+[32m{"level":"info","message":"Table allaqachon yaratilgan","timestamp":"2024-11-29T15:52:46.778Z"}[39m
+[32m{"level":"info","message":"Table allaqachon yaratilgan","timestamp":"2024-11-29T15:52:46.781Z"}[39m
+[32m{"level":"info","message":"Table allaqachon yaratilgan","timestamp":"2024-11-29T15:52:46.784Z"}[39m
+[32m{"level":"info","message":"Table allaqachon yaratilgan","timestamp":"2024-11-29T15:52:46.787Z"}[39m
+[32m{"level":"info","message":"Table allaqachon yaratilgan","timestamp":"2024-11-29T15:52:46.791Z"}[39m
+[32m{"level":"info","message":"Table allaqachon yaratilgan","timestamp":"2024-11-29T15:52:46.794Z"}[39m
+[32m{"level":"info","message":"Table allaqachon yaratilgan","timestamp":"2024-11-29T15:52:46.798Z"}[39m
+[31m{"level":"error","message":"alter table \"discount\" add constraint \"discount_product_id_foreign\" foreign key (\"product_id\") references \"products\" (\"id\") on update CASCADE on delete CASCADE - отношение \"products\" не существует","timestamp":"2024-11-29T15:56:13.458Z"}[39m
+[32m{"level":"info","message":"Table yaratildi","timestamp":"2024-11-29T15:56:13.482Z"}[39m
+[32m{"level":"info","message":"Table yaratildi","timestamp":"2024-11-29T15:56:13.504Z"}[39m
+[32m{"level":"info","message":"Table yaratildi","timestamp":"2024-11-29T15:56:13.517Z"}[39m
+[32m{"level":"info","message":"Table yaratildi","timestamp":"2024-11-29T15:56:13.529Z"}[39m
+[32m{"level":"info","message":"Table yaratildi","timestamp":"2024-11-29T15:56:13.543Z"}[39m
+[32m{"level":"info","message":"Table yaratildi","timestamp":"2024-11-29T15:56:13.557Z"}[39m
+[32m{"level":"info","message":"Table allaqachon yaratilgan","timestamp":"2024-11-29T15:56:13.561Z"}[39m
+[32m{"level":"info","message":"Table yaratildi","timestamp":"2024-11-29T15:56:13.576Z"}[39m
+[32m{"level":"info","message":"Table yaratildi","timestamp":"2024-11-29T15:56:13.590Z"}[39m
+[32m{"level":"info","message":"Table yaratildi","timestamp":"2024-11-29T15:56:13.606Z"}[39m

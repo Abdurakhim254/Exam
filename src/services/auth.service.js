@@ -4,7 +4,8 @@ import { comparepassword } from "../utils/compare/compare.password.js";
 import { createAccesstoken } from "../helpers/index.js";
 import { findByemail,deleteByemail } from "./index.js";
 import {decode_jwt} from "../helpers/index.js"
-import { v4 } from "uuid";
+import { id } from "../helpers/index.js";
+
 
 export const authRegisterService = async ({
   first_name,
@@ -18,7 +19,6 @@ export const authRegisterService = async ({
   updated_at,
 }) => {
   try {
-    const id = v4();
     if (role || created_at || updated_at) {
       var data = {
         first_name,

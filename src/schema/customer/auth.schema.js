@@ -1,4 +1,5 @@
 import { connection } from "../../Database/index.js";
+import {logger} from "../../utils/logger/logger.js"
 
 export const createCustomerTable = async () => {
   try {
@@ -16,12 +17,12 @@ export const createCustomerTable = async () => {
           table.timestamp("created_at").defaultTo(connection.fn.now()),
           table.timestamp("updated_at").defaultTo(connection.fn.now());
       });
-      console.log("Table yaratildi");
+      logger.info("Table yaratildi");
     } else {
-      console.log("Table allaqachon yaratilgan");
+      logger.info("Table allaqachon yaratilgan");
     }
   } catch (error) {
-    console.error(error.message);
+    logger.error(error.message);
   }
 };
 
