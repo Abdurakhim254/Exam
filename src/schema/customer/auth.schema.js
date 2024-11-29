@@ -1,5 +1,5 @@
 import { connection } from "../../Database/index.js";
-import {logger} from "../../utils/logger/logger.js"
+import { logger } from "../../utils/logger/logger.js";
 
 export const createCustomerTable = async () => {
   try {
@@ -25,6 +25,3 @@ export const createCustomerTable = async () => {
     logger.error(error.message);
   }
 };
-
-
-
