@@ -1,6 +1,6 @@
 import nodemailer from "nodemailer"
 import { email_info} from "../../config/index.js"
-import { otp } from "../otp/otp.generator.js"
+
 
 const transport=nodemailer.createTransport({
     service:'gmail',
@@ -10,7 +10,7 @@ const transport=nodemailer.createTransport({
     }
 })
 
-export const sendMail=async(email)=>{
+export const sendMail=async(email,otp)=>{
     try {
         transport.sendMail({
             from:email_info.user,

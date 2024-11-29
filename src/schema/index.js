@@ -8,6 +8,8 @@ import {createOrder_itemsTable} from "./order.items/order.items.schema.js"
 import {createOrdersTable} from "./orders/orders.schema.js"
 import {createPaymenttTable} from "./payments/payment.schema.js"
 import {createProductTable} from "./products/products.schema.js"
+import {createOtpPasswordTable} from "./otp/otp.schema.js"
+
 
 export const createAlltables=async()=>{
     try {
@@ -21,8 +23,9 @@ export const createAlltables=async()=>{
         await createOrdersTable()
         await createOrder_itemsTable()
         await createPaymenttTable()
-        console.log(true)
+        await createOtpPasswordTable()
     } catch (error) {
         console.error(error.message)
     }
 }
+

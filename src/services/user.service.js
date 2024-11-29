@@ -26,3 +26,17 @@ export const deleteByemail=async(email)=>{
         return error.message
     }
 }
+
+export const activateUseraccount=async(email)=>{
+    try {
+        const is_active=true
+        const res=await connection.select("*").from('customer').where({email}).update({is_active}).returning("*")
+        if(res.length>=1){
+            return "Akkount Aktivlashtirildi"
+        }else{
+            return "Aktivlashtiriladigan akkount topilmadi"
+        }
+    } catch (error) {
+        return error.message
+    }
+}

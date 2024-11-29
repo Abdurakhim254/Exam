@@ -8,5 +8,6 @@ authRouter.post("/signUp",AuthDatamiddleware(authRegisterValidationSchema),AuthO
 authRouter.post("/signIn",AuthLoginmiddleware(authLoginValidationSchema),AuthObj.LoginCon)
 authRouter.get("/me",AuthObj.ProfileCon)
 authRouter.post("/verify-otp",AuthObj.VerifyCon)
+authRouter.post("/send-otp",AuthObj.SendOtpCon)
 authRouter.get("/logout",AuthObj.LogOutCon)
 authRouter.post("/refresh-token",AuthObj.RefreshTokenCon)

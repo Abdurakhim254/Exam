@@ -1,5 +1,5 @@
 import {statusCodes} from "../config/index.js"
-import {authRegisterService,authLoginService,profileService,RefreshtokenService,logOutService} from "../services/index.js"
+import {authRegisterService,authLoginService,profileService,RefreshtokenService,logOutService,authVerifyService, SendOtpService} from "../services/index.js"
 
 const ok=statusCodes.ok
 const not_found=statusCodes.not_found
@@ -36,9 +36,22 @@ export const AuthObj={
             res.status(bad).send(error.message)
         }
     },
+
+    SendOtpCon:async function(req,res){
+        try {
+            const {email}=req.body
+            const result=await SendOtpService(email)
+            res.status(ok).send(result)
+        } catch (error) {
+            res.status(bad).send(error.message)
+        }
+    }
+    ,
     VerifyCon:async function(req,res){
         try {
-            res.status(ok).send("ok")
+            const {otp,email}=req.body
+            const result=await authVerifyService({otp,email})
+            res.status(ok).send(result)
         } catch (error) {
             res.status(bad).send(error.message)
         }

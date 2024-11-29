@@ -22,4 +22,3 @@ export const createDiscounttTable = async () => {
   };
   
 
-await createDiscounttTable()
