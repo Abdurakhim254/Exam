@@ -1,10 +1,10 @@
-import {compare} from "bcrypt"
+import { compare } from "bcrypt";
 
-export const comparepassword=async(password,pass)=>{
-    try {
-        const res=await compare(password,pass)
-        return res
-    } catch (error) {
-        return error.message
-    }
-}
+export const comparepassword = async (password, pass) => {
+  try {
+    const res = await compare(password, pass);
+    return res;
+  } catch (error) {
+    return error.message;
+  }
+};
