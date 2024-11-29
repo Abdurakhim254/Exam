@@ -5,6 +5,7 @@ export const createProductTable = async () => {
       if (!(await connection.schema.hasTable("products"))) {
         await connection.schema.createTable("products", (table) => {
           table.uuid("id").primary(),
+          table.uuid('customer_id').references('id').inTable('customer').notNullable(),
          table.string('name').notNullable(),
          table.string('description').notNullable(),
          table.integer('price').notNullable(),
