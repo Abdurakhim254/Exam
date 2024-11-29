@@ -46,7 +46,10 @@ export const feedbackObj={
 
     UpdateFedbackCon:async function(req,res){
         try {
-            res.status(ok).send("ok")
+            const {id}=req.params
+            const {customer_id,submitted_at,feedback_type,content}=req.body
+            const result=await UpdatefeedbackService({id,customer_id,submitted_at,feedback_type,content})
+            res.status(ok).send(result)
         } catch (error) {
             res.status(bad).send(error.message)
         }

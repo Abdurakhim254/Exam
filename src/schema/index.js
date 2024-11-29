@@ -26,4 +26,3 @@ export const createAlltables=async()=>{
         console.error(error.message)
     }
 }
-await createAlltables()
