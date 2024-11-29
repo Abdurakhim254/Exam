@@ -8,8 +8,8 @@ export const createOrder_itemsTable = async () => {
           table.uuid('order_id').references('id').inTable('orders').notNullable(),
           table.uuid('product_id').references('id').inTable('products').notNullable(),
           table.integer('quantity').notNullable(),
-          table.decimal('price').notNullable(),
-          table.decimal('subtotal').notNullable()
+          table.integer('price').notNullable(),
+          table.integer('subtotal').notNullable()
         });
         console.log("Table yaratildi");
       } else {

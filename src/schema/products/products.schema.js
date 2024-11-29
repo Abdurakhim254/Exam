@@ -7,7 +7,7 @@ export const createProductTable = async () => {
           table.uuid("id").primary(),
          table.string('name').notNullable(),
          table.string('description').notNullable(),
-         table.decimal('price').notNullable(),
+         table.integer('price').notNullable(),
          table.integer('stock').notNullable()
         });
         console.log("Table yaratildi");
