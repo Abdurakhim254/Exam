@@ -27,6 +27,21 @@ export const deleteByemail=async(email)=>{
     }
 }
 
+export const UpdateUserPassword=async(email,password)=>{
+    try {
+        const data=await connection.select("*").from("customer").where({email}).update({password}).returning("*")
+        console.log(data)
+        if(data.length>=1){
+            return "Password yangilandi"
+        }else{
+            return "Password yangilanmadi"
+        }
+    } catch (error) {
+        return error.message
+    }
+}
+
+
 export const activateUseraccount=async(email)=>{
     try {
         const is_active=true
@@ -40,3 +55,4 @@ export const activateUseraccount=async(email)=>{
         return error.message
     }
 }
+

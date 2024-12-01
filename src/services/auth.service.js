@@ -2,7 +2,7 @@ import { connection } from "../Database/index.js";
 import { hashshpassword } from "../utils/hash/hashspassword.js";
 import { comparepassword } from "../utils/compare/compare.password.js";
 import { createAccesstoken } from "../helpers/index.js";
-import { findByemail,deleteByemail,activateUseraccount } from "./index.js";
+import { findByemail,deleteByemail,activateUseraccount,UpdateUserPassword } from "./index.js";
 import {decode_jwt} from "../helpers/index.js"
 import { id } from "../helpers/index.js";
 import {sendMail} from "../utils/sendOtp/send.mail.js"
@@ -60,19 +60,19 @@ export const authLoginService = async ({ email, password }) => {
 
 export const authVerifyService=async({otp,email})=>{
   try {
-    const result=await findByemail(email)
-    if(result[0].is_active){
-      return "Accountingiz Statusi Joyida"
-    }else{
-      const OtpData=await findByotp(otp)
-      if(OtpData){
-        await deleteOtp(otp)
-        await activateUseraccount(email)
-        return "Accountingiz Aktivlashtirildi"
-      }else{
-        return "Otp kodni Xato kiritdintiz"
-      }
-    }
+   const res=await findByemail(email)
+   if(res[0].is_active){
+    return "Account Statusingiz Joyida"
+  }else{
+     const otpData=await findByotp(otp)
+     if(otpData.length==1){
+      await activateUseraccount(email)
+      await deleteOtp(otp)
+      return "Account Activlashtirildi"
+     }else{
+      return "Otp Password xato"
+     }
+   }
   } catch (error) {
     return error.message
   }
@@ -83,6 +83,28 @@ export const SendOtpService=async(email)=>{
     await sendMail(email,otp)
     await SaveOtp(otp)
     return "Emailingizga qarang"
+  } catch (error) {
+    return error.message
+  }
+}
+
+export const forgetPasswordService=async({email,password,otp})=>{
+  try {
+    const userdata=await findByemail(email)
+    if(userdata.length>=1){
+      const otpData=await findByotp(otp)
+      if(otpData.length==1){
+        const hashshedpassword=await hashshpassword(password)
+        await deleteOtp(otp)  
+        const data=await UpdateUserPassword(email,hashshedpassword)
+        return data
+      }else{
+        return "Otp password xato"
+      }
+    }else{
+      return "Password almashtirilishi kerak bo'lgan account topilmadi"
+    }
+
   } catch (error) {
     return error.message
   }
