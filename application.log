@@ -220,3 +220,6 @@
 [32m{"level":"info","message":"Otp saved","timestamp":"2024-12-01T10:00:00.431Z"}[39m
 [32m{"level":"info","message":"Otp saved","timestamp":"2024-12-01T10:05:02.925Z"}[39m
 [32m{"level":"info","message":"Otp saved","timestamp":"2024-12-01T10:05:59.267Z"}[39m
+[31m{"code":"ERR_HTTP_HEADERS_SENT","level":"error","timestamp":"2024-12-01T14:52:05.423Z"}[39m
+[31m{"code":"ERR_HTTP_HEADERS_SENT","level":"error","timestamp":"2024-12-01T14:59:23.053Z"}[39m
+[31m{"code":"ERR_HTTP_HEADERS_SENT","level":"error","timestamp":"2024-12-01T15:22:52.495Z"}[39m
