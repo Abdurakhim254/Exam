@@ -45,7 +45,9 @@ export const UserObj = {
   updateUsercon: async function (req, res) {
     try {
         const {role}=req.user
-      res.status(ok).send("ok");
+        const {first_name,last_name,email,password,phone,date_of_birth,created_at,updated_at}=req.body
+      const result=await updateUserService({role,first_name,last_name,email,password,phone,date_of_birth,created_at,updated_at})
+      res.status(ok).send(result);
     } catch (error) {
       res.status(bad).send(error.message);
     }
